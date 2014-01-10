@@ -6,6 +6,13 @@ development:
   username: postgres
   password: maheshwari
 
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: datat
+  pool: 5
+  username: postgres
+  password: maheshwari
 
 
 
