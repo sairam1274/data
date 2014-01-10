@@ -6,9 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'foundation-rails'
 
- 
- 	gem "pg"
-  
+gem "pg"
+gem "rails_12factor" 
+
 ##AUthentication
 gem 'devise'
 gem 'activeadmin'
