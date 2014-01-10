@@ -1,10 +1,13 @@
 Datrackers::Application.routes.draw do
   
+  
+  root :to => 'static#home' 
+
+
   resources :reviews
   
 
 
-  root :to => 'static#home' 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
