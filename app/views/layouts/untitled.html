@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+
+ 
+
+  <div class="large-12 columns">
+    <div class="row"><br />
+      <%= yield %>
+    </div>
+  </div>
+   
+ <div class="row">
+    <div class="large-12 columns">
+ <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <img src="/assets/logo1.png">
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="divider"></li>
+          <li><h3 style="font-size:1.6875rem;font-family:Open Sans,Helvetica Neue,Helvetica,Helvetica,Arial,sans-serif;"><%= link_to "Home"%></h3></li>
+          <li class="divider"></li>
+          <li><h3 style="font-size:1.6875rem;font-family:Open Sans,Helvetica Neue,Helvetica,Helvetica,Arial,sans-serif;"><%= link_to "About Us" %></h3></li>
+          <li class="divider"></li>
+          <li><h3 style="font-size:1.6875rem;font-family:Open Sans,Helvetica Neue,Helvetica,Helvetica,Arial,sans-serif;"><%= link_to "Services" %></h3></li>
+          <li class="divider"></li>
+          <li><h3 style="font-size:1.6875rem;font-family:Open Sans,Helvetica Neue,Helvetica,Helvetica,Arial,sans-serif;"><%= link_to "Portfolio"%></h3></li>
+          <li class="divider"></li>
+          <li><h3 style="font-size:1.6875rem;font-family:Open Sans,Helvetica Neue,Helvetica,Helvetica,Arial,sans-serif;"><%= link_to "Jobs" %></h3></li>
+          <li class="divider"></li>
+          <li><h3 style="font-size:1.6875rem;font-family:Open Sans,Helvetica Neue,Helvetica,Helvetica,Arial,sans-serif;"><%= link_to "Team" %></h3></li>
+          <li class="divider"></li>
+          <li><h3 style="font-size:1.6875rem;font-family:Open Sans,Helvetica Neue,Helvetica,Helvetica,Arial,sans-serif;"><%= link_to "Contact Us" %></h3></li>
+
+        </ul>
+        <ul class="right">
+          <li class="divider"></li>
+            <li><h3> @ananthlabs</h3>
+            </li>
+          </ul>
+      </section>
+    </nav>
+    <!-- Navigation -->
+ 
+      <div class="row">
+        <div class="large-12 columns">
+ 
+          
+          <!-- End Top Bar -->
+        </div>
+      </div>
+ 
+    <!-- End Navigation -->
+ 
+      <div class="row">
+ 
+  <!-- Side Bar -->
+ 
+        <div class="large-4 small-12 columns">
+ 
+          <img src="http://placehold.it/500x500&text=Logo">
+ 
+          <div class="hide-for-small panel">
+            <h3>Clients</h3>
+            <img src="/assets/Hcl-Logo.jpg" width="100px" height="100px">
+            <h5 class="subheader" style="font-family:bold;">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim NANANANAN fermentum odio ornare sagittis.
+            </h5>
+          </div>
+ 
+          <a href="#">
+          <div class="panel callout radius">
+            <h6>99  items in your cart</h6>
+          </div>
+          </a>
+ 
+        </div>
+ 
+    <!-- End Side Bar -->
+ 
+ 
+    <!-- Thumbnails -->
+ 
+        <div class="large-8 columns">
+          <div class="row">
+ 
+            <!-- <div class="large-4 samll-6 columns panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;font-family:bold" align="center" >About Us</h5>
+            </div>
+
+           <div class="large-4 samll-6 columns panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;font-family:bold" align="center" >Services</h5>
+            </div>
+
+            <div class="large-4 columns panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;font-family:bold" align="center" >Portfolio</h5>
+            </div>
+
+            <div class="large-4 columns panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;font-family:bold" align="center" >Team</h5>
+            </div>
+
+            <div class="large-4 columns panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;font-family:bold" align="center" >Contact Us</h5>
+            </div>
+             -->
+            
+            <div class="large-4 small-6 columns">
+              
+ 
+              <div class="panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;">ABOUT US</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+ 
+              <div class="panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white; ">PORTFOLIO</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+ 
+              <div class="panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;">SERVICES</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+            <div class="large-4 small-6 columns">
+ 
+              <div class="panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white;">TEAM</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+            <div class="large-4 small-6 columns">
+ 
+              <div class="panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white; ">CONTACT US</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+            <div class="large-4 small-6 columns">
+ 
+              <div class="panel" style="background-color:#73c20e; height:250px;">
+                <h5 style="color:white; ">Item Name</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+          </div>
+ 
+    <!-- End Thumbnails -->
+ 
+ 
+   
+ 
+    <!-- Footer -->
+ 
+      <footer class="row">
+        <div class="large-12 columns"><hr />
+          <div class="row">
+ 
+            <div class="large-6 columns">
+              <p>© Ananth Labs 2014.</p>
+            </div>
+ 
+            
+          </div>
+        </div>
+      </footer>
+ 
+    <!-- End Footer -->
+ 
+    </div>
+  </div>
+    
+
+  
+
+ 
+ 
+ 
+
+    <%= javascript_include_tag "application" %>
+  </body>
+  <style type="text/css">
+
+
+.top-bar-section ul{
+    background: #fff;
+}
+.top-bar-section ul li a{
+    color: #585858;
+    font-size: 16px;
+}
+.top-bar-section ul li a:hover{
+    color: #73c20e;
+}</style>
+</html>

@@ -1,0 +1,44 @@
+<h1 align="center">Listing reviews</h1>
+<table class="table table-bordered table-striped">
+  <tr>
+    <th class="font">Review</th>
+    <th class="font">Emotion</th>
+    <th class="font">Polarity</th>&nbsp;
+    <th class="font">probability</th>
+    <th class="font">Sentiment</th>
+    <th class="font">Actions</th>
+  </tr>
+
+
+
+<% @reviews.each do |reviews| %>
+  <tr>
+    <td><%= reviews.review %></td>
+
+     <% @reviews_string = reviews.review.to_s %>
+
+    <td><%=  SadPanda.emotion(reviews.review.to_s) %> </td>
+    <td><%=  SadPanda.polarity(reviews.review.to_s) %> </td>
+      
+    <% @sentiment_states = JSON.parse(Sentimentalizer.analyze(@reviews_string)) %>
+    <td>  <%= @sentiment_states["probability"] %> </td>
+      <td>  <%= @sentiment_states["sentiment"] %> </td>
+
+
+    <td><%= link_to 'Show', reviews_path %></td>
+    <td><%= link_to 'Edit', edit_review_path(reviews) %></td>
+    <td><%= link_to 'Destroy',reviews_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'New Review',  new_review_path , :class => "button redius" %>
+
+
+<style type="text/css">
+.font{
+  font-size:16px;
+
+}
+</style>
