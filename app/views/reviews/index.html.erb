@@ -14,8 +14,8 @@
 <% @reviews.each do |reviews| %>
   <tr>
     <td><%= reviews.review %></td>
-
-     <% @reviews_string = reviews.review.to_s %>
+        
+    <% @reviews_string = reviews.review.to_s %>
 
     <td><%=  SadPanda.emotion(reviews.review.to_s) %> </td>
     <td><%=  SadPanda.polarity(reviews.review.to_s) %> </td>

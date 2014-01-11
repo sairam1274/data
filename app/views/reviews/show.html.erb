@@ -3,100 +3,28 @@
 
 
 	<!-- SAD PANDA -->
-<div class="page-header">
-  <h1>Review: 
-  	<small><hr>
-  	<% @review.review%>
-  </small></h1>
-</div>
-
-
-   <%  @review_string = @review.review %>
-
-
-
-
-	<% @sentiment_state = JSON.parse(Sentimentalizer.analyze(@review_string)) %>
-
-	<% @sentiment_state["probability"] %> 
-	<% @sentiment_state["sentiment"] %>
-    <% @review_sentiment  %>
-	<% @review_polarity  %>
-	 <% @review_emotion %>
-
-
-<hr>
- <div class="row-fluid padded10">
-         <h1 style="text-align:center"> Review : <%= @review.review %>  </h1>
-         <hr>  
-        <div class="span3 center">
-          <div class="stat-box medium-blue">
-            <i class="icon icon-large"></i>
-                        <span class="stat-text" style="padding-top:10px">Review Probability</span>
-
-            <span class="count"><%= @sentiment_state["probability"] %></span>
-          </div>
-        </div>
-
-        <div class="span2 center">
-          <div class="stat-box dark-blue">
-            <i class="icon- icon-large"></i>
-            <span class="count"><%= @sentiment_state["sentiment"] %></span>
-            <span class="stat-text">Review Sentiment</span>
-          </div>
-        </div>
-
-        <div class="span2 center">
-          <div class="stat-box border-blue">
-            <i class="icon icon-large"></i>
-            <span class="count"> <%= @review_emotion %></span>
-            <span class="stat-text">Emotions</span>
-          </div>
-        </div>
-
-        <div class="span2 center">
-          <div class="stat-box text-blue">
-            <i class="icon-hand-right icon-large"></i>
-            <span class="count"><%= @review_polarity  %></span>
-            <span class="stat-text">Review Polarity</span>
-          </div>
-        </div>
-
-     </div>
-
-
-
-
-
-
-
-
-
-
-
-
+  <%  @review_string = @review.review %>
    
+    <% @sentiment_state = JSON.parse(Sentimentalizer.analyze(@review_string)) %>
 
-	<hr>
-	<%= link_to 'Edit', edit_review_path(@review), :class => "button redius" %> 
-	<%= link_to 'Back', reviews_path, :class => "button redius"  %>
+	    <% @sentiment_state["probability"] %> 
+	    <% @sentiment_state["sentiment"] %>
+      <% @review_sentiment  %>
+	    <% @review_polarity  %>
+	    <% @review_emotion %>
 
-<hr>	
- 
-       <!--  <div class="span2 center">
-          <div class="stat-box dark-blue">
-            <i class="icon-envelope icon-large"></i>
-            <span class="count">32</span>
-            <span class="stat-text">Messages</span>
-          </div>
-        </div>
-
-        <div class="span2 center">
-          <div class="stat-box medium-blue">
-            <i class="icon-comments-alt icon-large"></i>
-            <span class="count">65</span>
-            <span class="stat-text">Comments</span>
-          </div>
-           </div>
-          -->
+    
+    <div class="large8 columns panel">
+      <h1 style="text-align:center"> Review : <%= @review.review %>  </h1><hr>
+        <pre>
+          <h6 style="font-size:16px;">Review Probability:<%= @sentiment_state["probability"] %></h6>
+          <h6 style="font-size:16px;">Review Sentiment: <%= @sentiment_state["sentiment"] %></h6>
+          <h6 style="font-size:16px;">Emotions: <%= @review_emotion %></h6>
+          <h6 style="font-size:16px;">Review Polarity: <%= @review_polarity %></h6>
+        </pre>
+    </div>
+    <hr>
+	    <%= link_to 'Edit', edit_review_path(@review), :class => "button redius" %> 
+	    <%= link_to 'Back', reviews_path, :class => "button redius"  %>
+    <hr>	
  
