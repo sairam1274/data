@@ -18,6 +18,9 @@ Datrackers::Application.routes.draw do
    get "static/about"
    get "static/contact"
 
+
+     break if ARGV.join.include? 'assets:precompile'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
