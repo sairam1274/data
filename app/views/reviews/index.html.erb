@@ -27,7 +27,7 @@
 
     <td><%= link_to 'Show', reviews_path %></td>
     <td><%= link_to 'Edit', edit_review_path(reviews) %></td>
-    <td><%= link_to 'Destroy',reviews_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy',review_path(reviews), :method => :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
