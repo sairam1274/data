@@ -1,25 +1,22 @@
 Datrackers::Application.routes.draw do
   
+  # root path
+    root :to => 'static#home' 
+
+  # resoures
+    resources :reviews
   
-  root :to => 'static#home' 
+  # devise
+    devise_for :admin_users, ActiveAdmin::Devise.config
+    ActiveAdmin.routes(self)
 
+    devise_for :users
+    ActiveAdmin.routes(self)
 
-  resources :reviews
-  
-
-
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-
-  devise_for :users
-  ActiveAdmin.routes(self)
-
-  get "static/home"
-
-  get "static/about"
-
-  get "static/contact"
+  # static view
+   get "static/home"
+   get "static/about"
+   get "static/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

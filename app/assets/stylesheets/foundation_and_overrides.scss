@@ -927,11 +927,12 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
+
  $topbar-bg-color: #fff;
  $topbar-bg: $topbar-bg-color;
 
 // Height and margin
- $topbar-height: 50px;
+// $topbar-height: 45px;
 // $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
@@ -942,7 +943,7 @@
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
+// $topbar-dropdown-link-color: #000;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
@@ -972,8 +973,17 @@ $topbar-link-bg-hover: #fff  ;
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: bold;
-// $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
+
+
+
+ $topbar-menu-link-color: #272727;
+
+ $topbar-menu: topbar-menu-link-color;
+
+ $topbar-menu-icon-color: #272727;
+
+ $topbar-menu: topbar-menu-icon-color;
+
 // $topbar-menu-link-color-toggled: #888;
 // $topbar-menu-icon-color-toggled: #888;
 
